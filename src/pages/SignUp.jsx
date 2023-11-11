@@ -30,46 +30,57 @@ const SignUp = () => {
   };
 
   return (
-    <form className="flex max-w-md flex-col gap-4" onSubmit={onSubmit}>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="email" value="Your email" />
+    
+  <div className="flex justify-center items-center h-screen">
+    
+    <div className="flex flex-col items-center max-w-md p-4 bg-gray-100 rounded-lg">
+    <h1 className="text-3xl font-semibold mb-4">Create an Account</h1>
+      <form className="flex max-w-md flex-col gap-4" onSubmit={onSubmit}>
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="email" value="Email" />
+          </div>
+          <TextInput
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-        <TextInput
-          id="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="password" value="Your password" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="password" value="Password" />
+          </div>
+          <TextInput
+            id="password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
-        <TextInput
-          id="password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="passwordTwo" value="Confirm password" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="passwordTwo" value="Confirm password" />
+          </div>
+          <TextInput
+            id="passwordTwo"
+            type="password"
+            value={passwordTwo}
+            onChange={(e) => setPasswordTwo(e.target.value)}
+            required
+          />
         </div>
-        <TextInput
-          id="passwordTwo"
-          type="password"
-          value={passwordTwo}
-          onChange={(e) => setPasswordTwo(e.target.value)}
-          required
-        />
-      </div>
-      {error && <p className="text-red-500">{error}</p>}
-      <Button type="submit">Submit</Button>
-    </form>
+        {error && <p className="text-red-500">{error}</p>}
+
+        <p className="text-sm text-gray-500">Must be at least 8 characters, contain at least 1 uppercase letter, and 1 lowercase letter, and 1 number.</p>
+        
+        <Button type="create account">Create Account</Button>
+      </form>
+    </div>
+  </div>
+
   );
 };
 
