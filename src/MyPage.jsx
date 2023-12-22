@@ -3,11 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Create a functional component named App
-const App = () => {
+const MyPage = () => {
   return (
     <div>
-      <h1 align="center">Hello, world</h1>
+      <h1 align="center">Hello, Krish bhaiya</h1>
     </div>
   );
 };
 
+export default MyPage;
