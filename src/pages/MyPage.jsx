@@ -4,8 +4,9 @@ import React from 'react';
 // Create a functional component named App
 const MyPage = () => {
   return (
-    <div>
-      <h1 align="center">Hello, Krish bhaiya</h1>
+    <div style={{ padding:"25px"}}>
+      <h1 align="center">IIT(ISM),Dhanbad</h1>
+      
     </div>
   );
 };

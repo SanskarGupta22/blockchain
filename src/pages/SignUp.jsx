@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { Button, Label, TextInput } from 'flowbite-react';
+import { Button, Label, TextInput, Navbar } from 'flowbite-react';
 import { useNavigate } from 'react-router-dom'; 
 
 const SignUp = () => {
@@ -21,7 +21,7 @@ const SignUp = () => {
         console.log("Success. The user is created in Firebase");
         navigate('/Profile');
       } catch (error) {
-        // An error occurred. Set error message to be displayed to the user
+      
         setError(error.message);
       }
     } else {
@@ -30,12 +30,17 @@ const SignUp = () => {
   };
 
   return (
-    
-  <div className="flex justify-center items-center h-screen">
-    
-    <div className="flex flex-col items-center max-w-md p-4 bg-gray-100 rounded-lg">
-    <h1 className="text-3xl font-semibold mb-4">Create an Account</h1>
-      <form className="flex max-w-md flex-col gap-4" onSubmit={onSubmit}>
+   < div className="flex flex-col items-center min-h-screen justify-center">
+      <div align="center">
+        <Navbar.Brand href="">
+          <img src="Screenshot 2023-12-21 200907.png" className="mb-10 h-20 sm:h-30 w-50" alt="Supply Link Logo" />
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
+        </Navbar.Brand>
+      </div>
+
+      <div className="flex flex-col items-center max-w-md p-4 bg-gray-100 rounded-lg">
+        <h1 className="text-3xl font-semibold mb-4">Create an Account</h1>
+        <form className="flex flex-col gap-4" onSubmit={onSubmit}>
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email" value="Email" />
@@ -80,6 +85,7 @@ const SignUp = () => {
       </form>
     </div>
   </div>
+  
 
   );
 };
