@@ -1,4 +1,4 @@
-// FAQ.js
+
 import React from 'react';
 import { Dropdown } from 'flowbite-react';
 import { Accordion } from 'flowbite-react';
@@ -20,8 +20,8 @@ function Component() {
       <Accordion.Panel>
        
         <Accordion.Title  style={{ backgroundColor: '#155e75', color: 'white', padding: '15px', fontSize: '16px',width: '700px',marginLeft: '300px' }}>What is a Decentralized Supply Tracking Web Application?</Accordion.Title>
-        <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400 width-700">
+        <Accordion.Content style={{ width: '700px',marginLeft: '300px' }}>
+          <p className="mb-2 text-gray-500 dark:text-gray-400 ">
             
           A Decentralized Supply Tracking Web Application is a software system that leverages blockchain technology to enable decentralized and transparent tracking of the supply chain.In a traditional supply chain, information is often siloed, and trust can be an issue among different entities involved in the process. A decentralized supply tracking web application addresses these challenges by utilizing a blockchain to store and manage the supply chain data in a secure and transparent manner. 
           </p>
