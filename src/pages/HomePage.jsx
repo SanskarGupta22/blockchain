@@ -5,11 +5,11 @@ import { Label, TextInput } from 'flowbite-react';
 
 const Home = () => {
   return (
-    <div>
+    <div style={{backgroundColor: '#c5fcfc'}}>
       
       {/* Navbar */}
       
-      <Navbar fluid rounded>
+      <Navbar fluid rounded style={{backgroundColor: '#c5fcfc'}} >
         <Navbar.Brand href="">
           <img src="Screenshot 2023-12-21 200907.png" className="mr-20 h-20 sm:h-30 w-50" alt="Supply Link Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
