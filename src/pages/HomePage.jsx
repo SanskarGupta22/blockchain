@@ -5,13 +5,12 @@ import { Label, TextInput } from 'flowbite-react';
 
 const Home = () => {
   return (
-    <div style={{backgroundColor: '#c5fcfc'}}>
-      
+    <div style={{ background: 'linear-gradient(to right, #191714, #2234AE)', minHeight: '100vh' }}>
       {/* Navbar */}
       
-      <Navbar fluid rounded style={{backgroundColor: '#c5fcfc'}} >
+      <Navbar fluid rounded style={{ backgroundColor: 'transparent', height: '80px', padding: '10px' }}>
         <Navbar.Brand href="">
-          <img src="Screenshot 2023-12-21 200907.png" className="mr-20 h-20 sm:h-30 w-50" alt="Supply Link Logo" />
+          <img src="Screenshot 2023-12-21 200907.png" className="mr-20 h-22 sm:h-30 w-36" alt="Supply Link Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
         </Navbar.Brand>
         
@@ -23,7 +22,7 @@ const Home = () => {
          
 
           {/* Search bar */}
-          <div className="flex max-w-md flex-col gap-4" style={{width:"200px"}} >
+          <div className="flex max-w-md flex-col gap-4" style={{width:"200px", marginTop: "14px" }} >
             <div>
               <div className="mb-2 block">
                 
@@ -32,8 +31,13 @@ const Home = () => {
               <TextInput id="input-gray" placeholder="Search" required color="gray" style={{ width: '100%' }} />
             </div>
           </div>
+
+          <p style={{ fontSize: '18px', color: 'white', marginTop: '28px', paddingLeft: '16px'}}>Sign In </p>
+
+          <Button style={{ fontSize: '50px', padding: '20px', backgroundColor: '#496CF6', color: 'white', fontWeight: 'bold' }}>Sign Up</Button>
           
-          <Button>Get In Touch</Button>
+          
+
 
           {/* Navbar toggle button */}
           <Navbar.Toggle />
@@ -42,33 +46,43 @@ const Home = () => {
 
         
           {/* Navbar links */}
-        <Navbar.Collapse style={{ marginLeft: '120px' }}>
-          <Navbar.Link href="#" active>
+          <Navbar.Collapse style={{ marginLeft: '140px' }}>
+          <Navbar.Link href="#" active style={{ fontSize: '23px', color: 'white' }}>
             Home
           </Navbar.Link>
-          <Navbar.Link href="/MyPage">About</Navbar.Link>
-          <Navbar.Link href="#">Track Your Order</Navbar.Link>
-          <Navbar.Link href="#">Documents</Navbar.Link>
-          <Navbar.Link href="/Question">Help/FAQ</Navbar.Link>
+          <Navbar.Link href="/MyPage" style={{ fontSize: '23px', color: 'white' }}>
+            About
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Track Your Order
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Documents
+          </Navbar.Link>
+          <Navbar.Link href="/Question" style={{ fontSize: '23px', color: 'white' }}>
+            Help/FAQ
+          </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
+
+      {/* Big white text */}
+      <div align ="center">
+        <h1 style={{ fontSize: '65px', color: 'white', marginTop: '115px', fontWeight: 'bold', lineHeight: '1.2'  }}>Decentralized Supply Tracking <br /> Web Application</h1>
+      
+        {/* Smaller white text lines */}
+        <p style={{ fontSize: '25px', color: 'white', marginTop: '25px'}}>SupplyLink is a cutting-edge company specializing in decentralized supply chain </p>
+        <p style={{ fontSize: '25px', color: 'white' }}>tracking applications. Our innovative technology fosters transparency,  </p>
+        <p style={{ fontSize: '25px', color: 'white' }}>ensuring a clear view of the supply chain process.</p>
+      
+      </div>
+
       
 
-      {/* Card */}
-      <div align="center">
-        <Card className="max-w-sm" imgSrc="Screenshot 2023-12-21 202351.png" horizontal>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Decentralized Supply Tracking Web Application
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-            A decentralized supply chain tracking application can help with transparency, accountability, and efficiency.
-          </p>
-        </Card>
-      </div>
+     
       {/*card1*/}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", marginTop: '80px'}}>
         <div className="mt-8 mx-4 ">
-          <Card href="/Pharma" className="" style={{width:"425px"}} imgSrc="MBA-Pharma-and-Healthcare-Management-Program-1.jpg" horizontal >
+          <Card href="/Pharma" className="" style={{width:"600px", height: "200px"}} imgSrc="MBA-Pharma-and-Healthcare-Management-Program-1.jpg" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-3" align="center">
             Pharmaceutical Products</h5>
           
@@ -78,7 +92,7 @@ const Home = () => {
       
         {/*card2*/}
         <div className="mt-8 mx-4 ">
-          <Card href="/Product2" className="" style={{width:"425px"}} imgSrc="imgonline-com-ua-resize-5T2aPJk6zoi6.jpg" horizontal >
+          <Card href="/Product2" className="" style={{width:"600px", height: "200px"}} imgSrc="imgonline-com-ua-resize-5T2aPJk6zoi6.jpg" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-9" align="center">
             Agricultural Products</h5>
           
@@ -86,9 +100,9 @@ const Home = () => {
         </div>
         {/*card3*/}
         <div  className="mt-8 mx-4 ">
-          <Card href="/Product3" className="" style={{width:"425px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
+          <Card href="/Product3" className="" style={{width:"600px", height: "200px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-9" align="center">
-            Product 3</h5>
+            Consumer Technology</h5>
           
         </Card>
         </div>
@@ -96,9 +110,9 @@ const Home = () => {
        {/*card4*/}
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div className="mt-8 mx-4 ">
-          <Card href="/Product4" className="" style={{width:"425px"}} imgSrc="MBA-Pharma-and-Healthcare-Management-Program-1.jpg" horizontal >
+          <Card href="/Product4" className="" style={{width:"600px", height: "200px"}} imgSrc="MBA-Pharma-and-Healthcare-Management-Program-1.jpg" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-3" align="center">
-             Product 4</h5>
+             Automotive Industry</h5>
           
           
         </Card>
@@ -106,17 +120,17 @@ const Home = () => {
       
         {/*card5*/}
         <div className="mt-8 mx-4 ">
-          <Card href="/Product5" className="" style={{width:"425px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
+          <Card href="/Product5" className="" style={{width:"600px", height: "200px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-9" align="center">
-            Product 5</h5>
+            Travel</h5>
           
         </Card>
         </div>
         {/*card6*/}
         <div className="mt-8 mx-4 ">
-          <Card href="/Product6" className="" style={{width:"425px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
+          <Card href="/Product6" className="" style={{width:"600px", height: "200px"}} imgSrc="Screenshot 2023-12-21 202351.png" horizontal >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-9" align="center">
-            Product 6</h5>
+            Stationery</h5>
           
         </Card>
         </div>

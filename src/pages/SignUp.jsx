@@ -30,13 +30,66 @@ const SignUp = () => {
   };
 
   return (
-   < div className="flex flex-col items-center min-h-screen justify-center">
-      <div align="center">
+  <div style={{ background: 'linear-gradient(to right, #191714, #2234AE)', minHeight: '100vh' }}>
+   
+   <Navbar fluid rounded style={{ backgroundColor: 'transparent', height: '80px', padding: '10px' }}>
         <Navbar.Brand href="">
-          <img src="Screenshot 2023-12-21 200907.png" className="mb-10 h-20 sm:h-30 w-50" alt="Supply Link Logo" />
+          <img src="Screenshot 2023-12-21 200907.png" className="mr-20 h-22 sm:h-30 w-36" alt="Supply Link Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
         </Navbar.Brand>
-      </div>
+        
+        
+
+        < div className="flex md:order-2 space-x-4">
+          
+          
+         
+
+          {/* Search bar */}
+          <div className="flex max-w-md flex-col gap-4" style={{width:"200px", marginTop: "14px" }} >
+            <div>
+              <div className="mb-2 block">
+                
+                <Label htmlFor="input-gray" color="gray" value="" />
+              </div>
+              <TextInput id="input-gray" placeholder="Search" required color="gray" style={{ width: '100%' }} />
+            </div>
+          </div>
+
+          <p style={{ fontSize: '18px', color: 'white', marginTop: '28px', paddingLeft: '16px'}}>Sign In </p>
+
+          <Button style={{ fontSize: '50px', padding: '20px', backgroundColor: '#496CF6', color: 'white', fontWeight: 'bold' }}>Sign Up</Button>
+          
+          
+
+
+          {/* Navbar toggle button */}
+          <Navbar.Toggle />
+        </div>
+        
+
+        
+          {/* Navbar links */}
+          <Navbar.Collapse style={{ marginLeft: '140px' }}>
+          <Navbar.Link href="#" active style={{ fontSize: '23px', color: 'white' }}>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/MyPage" style={{ fontSize: '23px', color: 'white' }}>
+            About
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Track Your Order
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Documents
+          </Navbar.Link>
+          <Navbar.Link href="/Question" style={{ fontSize: '23px', color: 'white' }}>
+            Help/FAQ
+          </Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+      
+   < div className="flex flex-col items-center min-h-screen justify-center">
 
       <div className="flex flex-col items-center max-w-md p-4 bg-gray-100 rounded-lg">
         <h1 className="text-3xl font-semibold mb-4">Create an Account</h1>
@@ -84,6 +137,7 @@ const SignUp = () => {
         <Button type="create account">Create Account</Button>
       </form>
     </div>
+  </div>
   </div>
   
 

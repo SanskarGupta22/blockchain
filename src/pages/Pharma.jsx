@@ -1,24 +1,72 @@
 import React from 'react';
-import { Card } from 'flowbite-react';
+import { Card, TextInput } from 'flowbite-react';
+import { Button, Navbar, Label } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
 const Med = () => {
   return (
-    <div className="container mx-auto p-8" style={{backgroundColor: '#c5fcfc'}}>
+    <div style={{ background: 'linear-gradient(to right, #191714, #2234AE)', minHeight: '100vh' }}>
+    
    
-      <div className="flex items-center justify-between mb-10">
-        <img
-          src="Screenshot 2023-12-21 200907.png"
-          className="h-20 sm:h-30 w-50"
-          alt="Supply Link Logo"
-        />
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-          Pharmaceutical Equipments
-        </h1>
-        <div className="w-50"></div>
-      </div>
+    <Navbar fluid rounded style={{ backgroundColor: 'transparent', height: '80px', padding: '10px' }}>
+        <Navbar.Brand href="">
+          <img src="Screenshot 2023-12-21 200907.png" className="mr-20 h-22 sm:h-30 w-36" alt="Supply Link Logo" />
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
+        </Navbar.Brand>
+        
+        
 
-      <div className="flex justify-center flex-col sm:flex-row">
+        < div className="flex md:order-2 space-x-4">
+          
+          
+         
+
+          {/* Search bar */}
+          <div className="flex max-w-md flex-col gap-4" style={{width:"200px", marginTop: "14px" }} >
+            <div>
+              <div className="mb-2 block">
+                
+                <Label htmlFor="input-gray" color="gray" value="" />
+              </div>
+              <TextInput id="input-gray" placeholder="Search" required color="gray" style={{ width: '100%' }} />
+            </div>
+          </div>
+
+          <p style={{ fontSize: '18px', color: 'white', marginTop: '28px', paddingLeft: '16px'}}>Sign In </p>
+
+          <Button style={{ fontSize: '50px', padding: '20px', backgroundColor: '#496CF6', color: 'white', fontWeight: 'bold' }}>Sign Up</Button>
+          
+          
+
+
+          {/* Navbar toggle button */}
+          <Navbar.Toggle />
+        </div>
+        
+
+        
+          {/* Navbar links */}
+          <Navbar.Collapse style={{ marginLeft: '140px' }}>
+          <Navbar.Link href="#" active style={{ fontSize: '23px', color: 'white' }}>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/MyPage" style={{ fontSize: '23px', color: 'white' }}>
+            About
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Track Your Order
+          </Navbar.Link>
+          <Navbar.Link href="#" style={{ fontSize: '23px', color: 'white' }}>
+            Documents
+          </Navbar.Link>
+          <Navbar.Link href="/Question" style={{ fontSize: '23px', color: 'white' }}>
+            Help/FAQ
+          </Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <div className="flex justify-center flex-col sm:flex-row ">
+        
         {/* Product 1 */}
         <Card className="max-w-sm">
             <img
